@@ -7,7 +7,7 @@
 DATA=$(date +%d-%m-%Y)
 LOGS="/var/log/script-wpcron-disable.log"
 > $LOGS
-for filez in $(find /home/ -iname "wp-config.php") 
+for filez in $(find /home/ -iname 'wp-config.php') 
 do 
 echo -e "checking file $filez"
 	if egrep DISABLE_WP_CRON $filez >> /dev/null 2>&1
